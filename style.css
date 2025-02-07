@@ -547,18 +547,3 @@ header {
     color: #666;
 }
 
-/* ✅ Supprime uniquement les contraintes de position du header */
-.header-container, header {
-    position: relative !important; /* 🔥 Le header bouge avec la page */
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    z-index: auto !important;
-    background-color: white !important;
-}
-
-/* ✅ On s'assure que le BODY peut scroller normalement */
-body, html {
-    overflow: auto !important;
-    height: auto !important;
-}
