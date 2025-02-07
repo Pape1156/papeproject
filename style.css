@@ -499,14 +499,14 @@ header {
         left: 15px; /* Ajouter un espace de 15px du bord gauche */
     }
 
-    /* ✅ Centrer le logo */
+    /* ✅ Centrer le logo, mais le pousser vers la droite */
     .logo {
         flex-grow: 1; /* Utilise tout l'espace disponible */
         display: flex;
         justify-content: center; /* Centrer le logo */
-        position: absolute; /* Positionner absolument au centre */
-        left: 50%; /* Positionner à 50% de la largeur */
-        transform: translateX(-50%); /* Utilise transform pour décaler de moitié */
+        position: absolute; /* Positionner absolument */
+        left: 55%; /* Déplacer le logo légèrement à droite */
+        transform: translateX(-50%); /* Utilise transform pour ajuster parfaitement */
     }
 
     .logo img {
