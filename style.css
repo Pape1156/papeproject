@@ -754,80 +754,114 @@ nav ul li a:hover {
 }
 
 
+/* ✅ Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Header (corrigé) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Logo */
+.logo img {
+    width: 60px; /* Ajuste la taille */
+}
+
+/* ✅ Navigation */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* ✅ Menu Hamburger */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ✅ Image de présentation */
+.hero {
+    background: url('image.jpg') center/cover no-repeat;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ✅ Responsive pour mobile */
 @media (max-width: 768px) {
-    /* ✅ MENU HAMBURGER */
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
+    /* ✅ Réduction du hero */
+    .hero {
+        height: 40vh;
+        padding: 20px;
     }
 
+    /* ✅ Correction de l'entête */
     .navbar ul {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
+        right: 20px;
         background: white;
-        padding: 10px 0;
-        text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
     }
 
     .navbar ul.active {
         display: flex;
     }
 
-    .navbar ul li {
-        margin: 10px 0;
+    .menu-toggle {
+        display: block;
     }
 
-    /* ✅ HERO SECTION */
-    .hero {
-        height: 50vh !important;
-        padding: 40px 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .hero-content h1 {
-        font-size: 28px !important;
-    }
-
-    .hero-content p {
-        font-size: 16px !important;
-    }
-
-    /* ✅ MISE EN PAGE DES SECTIONS */
-    .mission-content,
-    .values-container {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-
-    .value-card,
-    .mission-image img {
-        width: 90% !important;
+    /* ✅ Ajustement des sections */
+    .history-container, .values-container, .team-members, .testimonials-container {
+        width: 90%;
         margin: auto;
     }
 
-    /* ✅ REDUCTION DES TITRES */
     h1, h2 {
-        font-size: 26px !important;
+        font-size: 24px;
     }
 
-    /* ✅ FOOTER */
     .footer {
-        padding: 10px 0 !important;
-    }
-
-    .footer p {
-        font-size: 12px !important;
+        padding: 10px 0;
+        text-align: center;
     }
 }
