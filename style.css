@@ -472,7 +472,7 @@ header {
     /* ✅ Ajuster la taille de l'image */
     .hero {
         padding-top: 60px; /* Réduit l'espace en haut pour laisser plus de place à l'image */
-        height: 35vh; /* Réduit davantage la hauteur de l'image sur mobile pour plus de lisibilité */
+        height: 40vh; /* Réduit la hauteur de l'image sur mobile pour plus de lisibilité */
     }
 
     /* ✅ Réduire la taille du bouton "S'inscrire" */
@@ -507,11 +507,5 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    /* ✅ Placer le hamburger à gauche */
-    .menu-toggle {
-        position: absolute;
-        left: 15px; /* Décalé vers la gauche */
     }
 }
