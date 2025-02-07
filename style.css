@@ -425,10 +425,56 @@ header {
         padding-left: 0;
     }
 }
+/* ✅ Désactiver le scroll quand le menu est ouvert */
+.no-scroll {
+    overflow: hidden;  /* Cela empêche le défilement de la page */
+    height: 100vh; /* Empêche le défilement vertical */
+}
 
+/* ✅ SECTION HERO */
+.hero {
+    padding-top: 120px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background: url('petit.jpg.webp') center/cover no-repeat;
+    transition: opacity 0.3s ease;
+    z-index: 0; /* Image en arrière-plan */
+}
 
+/* ✅ Quand le menu est ouvert, l’image et tout le contenu passent derrière */
+.menu-open .hero {
+    z-index: -1; /* L'image passe derrière tout le contenu */
+}
 
+/* ✅ S'assurer que l'overlay et les autres éléments passent aussi derrière */
+.menu-open .navbar,
+.menu-open .menu-overlay,
+.menu-open main {
+    z-index: 1; /* Assurez-vous que le menu et l'overlay sont au-dessus du contenu */
+}
 
+/* ✅ Pour les autres éléments de la page (comme les images) */
+.menu-open img {
+    z-index: -1; /* Cela passe toutes les images derrière tout le contenu */
+}
 
+/* ✅ Ajustement pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px; /* Ajuste le padding pour mieux s'adapter aux petits écrans */
+        height: 50vh; /* Réduit la hauteur de l'image sur mobile pour une meilleure lisibilité */
+    }
 
+    .menu-open .hero {
+        height: 50vh; /* S'assure que l'image ne prend pas trop de place */
+    }
 
+    .menu-open .navbar {
+        padding: 15px; /* Assure un padding plus léger pour le menu sur mobile */
+    }
+}
