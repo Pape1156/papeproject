@@ -365,11 +365,50 @@ header {
     z-index: -1;
 }
 
-/* ✅ Responsive */
+/* ✅ Ajustement du header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px 15px; /* Ajout de padding pour l'espace */
+}
+
+/* ✅ Centrer le logo proprement */
+.logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 45px; /* Ajuste la taille si nécessaire */
+}
+
+/* ✅ Ajuster le bouton inscription */
+.inscription-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10px; /* Ajoute un petit espace */
+}
+
+.inscription-btn a {
+    padding: 8px 15px;
+    background: #8B1E3F;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* ✅ Responsive : Ajuste l'affichage sur mobile */
 @media (max-width: 768px) {
     .header-container {
+        grid-template-columns: auto 1fr auto;
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
         align-items: center;
     }
 
@@ -383,6 +422,7 @@ header {
 
     .inscription-btn {
         justify-self: end;
+        padding-left: 0;
     }
 }
 
