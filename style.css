@@ -425,21 +425,10 @@ header {
         padding-left: 0;
     }
 }
-/* ✅ Désactiver le scroll quand le menu est ouvert */
-.no-scroll {
-    overflow: hidden;
-    height: 100vh;
-}
 
-/* ✅ SECTION HERO */
-.hero {
-    padding-top: 120px;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    background: url('petit.jpg.webp') center/cover no-repeat;
-}
+
+
+
+
+
+
