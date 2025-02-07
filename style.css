@@ -480,3 +480,31 @@ header {
         padding: 15px; /* Assure un padding plus léger pour le menu sur mobile */
     }
 }
+
+/* ✅ Ajustement pour la disposition du logo et du menu hamburger sur mobile */
+@media (max-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px; /* Ajuste le padding pour donner de l'espace */
+    }
+
+    /* ✅ Déplacer le hamburger à gauche avec un peu d'espace */
+    .menu-toggle {
+        position: absolute;
+        left: 15px; /* Espace ajouté entre le hamburger et le bord gauche */
+    }
+
+    /* ✅ Centrer le logo */
+    .logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 45px; /* Ajuste la taille si nécessaire */
+    }
+}
