@@ -797,7 +797,15 @@ header {
 .menu-toggle {
     font-size: 28px;
     cursor: pointer;
-    display: none;
+    display: block; /* Afficher par défaut */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* ✅ Image de présentation */
@@ -810,8 +818,10 @@ header {
     justify-content: center;
     color: white;
     position: relative;
+    padding: 20px;
 }
 
+/* ✅ Overlay pour foncer l'image */
 .hero .overlay {
     position: absolute;
     top: 0;
@@ -821,9 +831,11 @@ header {
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* ✅ Contenu du hero */
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 90%;
 }
 
 /* ✅ Responsive pour mobile */
@@ -840,18 +852,26 @@ header {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
+        left: 0;
+        width: 100%;
         background: white;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
     }
 
     .navbar ul.active {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
+    /* ✅ Menu hamburger toujours visible */
     .menu-toggle {
         display: block;
+        transition: transform 0.3s ease-in-out;
     }
 
     /* ✅ Ajustement des sections */
@@ -860,10 +880,12 @@ header {
         margin: auto;
     }
 
+    /* ✅ Ajustement des tailles de texte */
     h1, h2 {
         font-size: 24px;
     }
 
+    /* ✅ Amélioration du footer */
     .footer {
         padding: 10px 0;
         text-align: center;
