@@ -472,7 +472,7 @@ header {
     /* ✅ Ajuster la taille de l'image */
     .hero {
         padding-top: 60px; /* Réduit l'espace en haut pour laisser plus de place à l'image */
-        height: 40vh; /* Réduit la hauteur de l'image sur mobile pour plus de lisibilité */
+        height: 35vh; /* Réduit davantage la hauteur de l'image sur mobile pour plus de lisibilité */
     }
 
     /* ✅ Réduire la taille du bouton "S'inscrire" */
