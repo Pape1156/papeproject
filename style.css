@@ -754,3 +754,64 @@ nav ul li a:hover {
 }
 
 
+@media (max-width: 768px) {
+    /* ✅ Réduction du hero */
+    .hero {
+        height: 40vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* ✅ Correction de l'entête */
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px 0 !important;
+    }
+
+    .navbar ul {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ✅ Ajustement de la mission */
+    .mission-content {
+        flex-direction: column !important;  /* Afficher en colonne sur téléphone */
+        text-align: center !important;
+        gap: 20px !important;
+    }
+
+    .mission-image img {
+        max-width: 100% !important;
+        border-radius: 8px !important;
+    }
+
+    /* ✅ Ajustement de la section valeurs */
+    .valeurs-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .valeur-card {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    /* ✅ Réduction des titres */
+    h1, h2 {
+        font-size: 24px !important;
+    }
+
+    /* ✅ Ajustement du footer */
+    .footer {
+        padding: 10px 0 !important;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+    }
+}
