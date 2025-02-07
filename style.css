@@ -467,37 +467,39 @@ header {
 
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
+    /* ✅ Ajuster la taille de l'image */
+    .hero {
+        padding-top: 60px; /* Réduit l'espace en haut pour laisser plus de place à l'image */
+        height: 40vh; /* Réduit la hauteur de l'image sur mobile pour plus de lisibilité */
+    }
+
+    /* ✅ Réduire la taille du bouton "S'inscrire" */
+    .inscription-btn a {
+        padding: 8px 15px; /* Réduit les padding du bouton */
+        font-size: 14px; /* Réduit la taille du texte pour le bouton */
+    }
+    
+    /* ✅ Ajustement du logo sur mobile */
+    .logo img {
+        width: 40px; /* Ajuste la taille du logo */
+    }
+
+    /* ✅ Positionner correctement le menu hamburger, logo et bouton */
     .header-container {
         display: flex;
-        justify-content: space-between; /* Crée un espace entre les éléments */
+        justify-content: space-between; /* Crée un espace entre le logo et le hamburger */
         align-items: center;
         width: 100%;
         padding: 0 15px; /* Un peu d'espace autour */
     }
 
-    /* ✅ Positionner le bouton hamburger à gauche */
-    .menu-toggle {
-        position: absolute;
-        left: 15px; /* Espace de 15px à gauche */
-    }
-
-    /* ✅ Centrer le logo du Sénégal */
+    /* ✅ Centrer le logo */
     .logo {
         flex-grow: 1;
         display: flex;
-        justify-content: center; /* Centrer le logo */
+        justify-content: center;
         position: absolute;
-        left: 50%; /* Positionner à 50% de la largeur */
-        transform: translateX(-50%); /* Déplacer de moitié pour le centrer */
-    }
-
-    .logo img {
-        width: 45px; /* Ajuste la taille du logo */
-    }
-
-    /* ✅ Positionner le bouton "S'inscrire" à droite */
-    .inscription-btn {
-        position: absolute;
-        right: 15px; /* Espace de 15px à droite */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
