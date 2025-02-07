@@ -478,6 +478,12 @@ header {
         position: relative;
     }
 
+    /* ✅ Menu hamburger bien aligné à gauche */
+    .menu-hamburger {
+        position: relative;
+        z-index: 10;
+    }
+
     /* ✅ Logo centré */
     .logo {
         position: absolute;
@@ -489,16 +495,13 @@ header {
         width: 40px; /* Ajuster la taille du logo */
     }
 
-    /* ✅ Bouton "S'inscrire" bien placé */
+    /* ✅ Bouton "S'inscrire" bien placé à droite */
+    .inscription-btn {
+        margin-left: auto; /* Pousse le bouton à droite */
+    }
+
     .inscription-btn a {
         padding: 8px 15px; /* Ajustement du padding */
         font-size: 14px; /* Taille du texte */
-        position: relative;
-    }
-
-    /* ✅ Menu hamburger bien aligné à gauche */
-    .menu-hamburger {
-        position: relative;
-        z-index: 10;
     }
 }
