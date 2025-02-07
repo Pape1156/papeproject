@@ -482,34 +482,44 @@ header {
 }
 
 
-/* ✅ Ajustement pour la disposition du logo et du menu hamburger sur mobile */
+/* ✅ Ajustement pour la disposition du logo, hamburger et bouton d'inscription */
 @media (max-width: 768px) {
-    /* ✅ Assurer que l'espace entre le logo et le hamburger est bien distribué */
+    /* ✅ Conteneur du header */
     .header-container {
         display: flex;
-        justify-content: space-between; /* Espace entre le logo et le hamburger */
+        justify-content: space-between; /* Espace entre les éléments */
         align-items: center;
         width: 100%;
-        padding: 0 15px; /* Un peu d'espace autour */
+        padding: 0 15px;
     }
 
-    /* ✅ Positionner le bouton hamburger à gauche */
+    /* ✅ Hamburger centré */
     .menu-toggle {
-        position: absolute; /* Position fixe à gauche */
-        left: 15px; /* Ajouter un espace de 15px du bord gauche */
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        position: absolute; /* Fixe le hamburger */
+        left: 50%; /* Centre horizontalement */
+        transform: translateX(-50%); /* Centrer parfaitement */
     }
 
-    /* ✅ Centrer le logo, mais le pousser vers la droite */
+    /* ✅ Logo à gauche */
     .logo {
-        flex-grow: 1; /* Utilise tout l'espace disponible */
-        display: flex;
-        justify-content: center; /* Centrer le logo */
-        position: absolute; /* Positionner absolument */
-        left: 55%; /* Déplacer le logo légèrement à droite */
-        transform: translateX(-50%); /* Utilise transform pour ajuster parfaitement */
+        position: absolute;
+        left: 10px; /* Place le logo tout à gauche */
     }
 
     .logo img {
-        width: 45px; /* Ajuste la taille du logo si nécessaire */
+        width: 45px; /* Ajuste la taille du logo */
+    }
+
+    /* ✅ Bouton inscription à droite */
+    .inscription-btn {
+        position: absolute;
+        right: 15px; /* Place le bouton inscription tout à droite */
     }
 }
