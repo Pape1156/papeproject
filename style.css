@@ -466,46 +466,39 @@ header {
 }
 
 
-
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
-    /* ✅ Ajuster la taille de l'image */
-    .hero {
-        padding-top: 60px; /* Réduit l'espace en haut pour laisser plus de place à l'image */
-        height: 40vh; /* Réduit la hauteur de l'image sur mobile pour plus de lisibilité */
-    }
-
-    /* ✅ Réduire la taille du bouton "S'inscrire" */
-    .inscription-btn a {
-        padding: 8px 15px; /* Réduit les padding du bouton */
-        font-size: 14px; /* Réduit la taille du texte pour le bouton */
-        position: absolute; /* Positionner le bouton */
-        right: 15px; /* Aligner le bouton sur la droite */
-        top: 50%; /* Centrer verticalement */
-        transform: translateY(-50%); /* Ajuste le centrage vertical */
-    }
-
-    /* ✅ Ajustement du logo sur mobile */
-    .logo img {
-        width: 40px; /* Ajuste la taille du logo */
-    }
-
-    /* ✅ Positionner correctement le menu hamburger, logo et bouton */
+    /* ✅ Conteneur du header pour aligner les éléments */
     .header-container {
         display: flex;
-        justify-content: space-between; /* Crée un espace entre le logo et le hamburger */
         align-items: center;
+        justify-content: space-between;
         width: 100%;
-        padding: 0 15px; /* Un peu d'espace autour */
+        padding: 10px 15px; /* Ajout d'un petit padding */
+        position: relative;
     }
 
-    /* ✅ Centrer le logo */
+    /* ✅ Logo centré */
     .logo {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .logo img {
+        width: 40px; /* Ajuster la taille du logo */
+    }
+
+    /* ✅ Bouton "S'inscrire" bien placé */
+    .inscription-btn a {
+        padding: 8px 15px; /* Ajustement du padding */
+        font-size: 14px; /* Taille du texte */
+        position: relative;
+    }
+
+    /* ✅ Menu hamburger bien aligné à gauche */
+    .menu-hamburger {
+        position: relative;
+        z-index: 10;
     }
 }
