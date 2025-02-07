@@ -42,17 +42,19 @@ header {
     }
     
     /* ✅ Menu hamburger */
-    .menu-toggle {
-        font-size: 28px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        transition: transform 0.3s ease;
-        padding: 10px;
-    }
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    position: absolute; /* Utilisation de position absolute */
+    left: 10px; /* Déplacer le hamburger à gauche */
+}
     
     /* ✅ Overlay pour l’effet flou */
     .overlay {
