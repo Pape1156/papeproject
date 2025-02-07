@@ -477,18 +477,13 @@ header {
         height: 50vh; /* S'assure que l'image ne prend pas trop de place */
     }
 
-    /* ✅ Ajustement du menu lorsqu'il est ouvert sur mobile */
-    .menu-open .navbar {
-        padding: 15px; /* Assure un padding plus léger pour le menu sur mobile */
-    }
-
     /* ✅ Ajustement de la disposition du logo et du menu hamburger sur mobile */
     .header-container {
         display: flex;
         justify-content: space-between; /* Espace entre le logo et le hamburger */
         align-items: center;
         width: 100%;
-        padding: 0 20px; /* Un peu d'espace autour */
+        padding: 0 15px; /* Un peu d'espace autour */
     }
 
     /* ✅ Positionner le bouton hamburger à gauche avec un peu d'espace */
@@ -497,7 +492,7 @@ header {
         left: 15px; /* Ajouter un espace de 15px du bord gauche */
     }
 
-    /* ✅ Centrer le logo au milieu avec un peu de marge */
+    /* ✅ Centrer le logo au milieu */
     .logo {
         flex-grow: 1;
         display: flex;
