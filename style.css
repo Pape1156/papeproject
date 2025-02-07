@@ -467,6 +467,7 @@ header {
 
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
+    /* ✅ Ajuste la taille de l'image hero */
     .hero {
         padding-top: 80px; /* Ajuste le padding pour mieux s'adapter aux petits écrans */
         height: 50vh; /* Réduit la hauteur de l'image sur mobile pour une meilleure lisibilité */
@@ -476,9 +477,42 @@ header {
         height: 50vh; /* S'assure que l'image ne prend pas trop de place */
     }
 
+    /* ✅ Ajustement du menu lorsqu'il est ouvert sur mobile */
     .menu-open .navbar {
         padding: 15px; /* Assure un padding plus léger pour le menu sur mobile */
     }
+
+    /* ✅ Ajustement de la disposition du logo et du menu hamburger sur mobile */
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Espace entre le logo et le hamburger */
+        align-items: center;
+        width: 100%;
+        padding: 0 15px; /* Un peu d'espace autour */
+    }
+
+    /* ✅ Positionner le bouton hamburger à gauche */
+    .menu-toggle {
+        position: absolute;
+        left: 15px; /* Ajouter un espace de 15px du bord gauche */
+    }
+
+    /* ✅ Centrer le logo */
+    .logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); /* Centrer le logo */
+    }
+
+    .logo img {
+        width: 45px; /* Ajuste la taille du logo si nécessaire */
+    }
+
+    /* ✅ Ajouter de l'espace à gauche du logo */
+    .logo {
+        margin-left: 15px; /* Ajouter un espace de 15px à gauche */
+    }
 }
-
-
