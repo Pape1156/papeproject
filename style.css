@@ -482,10 +482,6 @@ header {
 }
 
 
-
-
-
-
 /* ✅ Ajustement pour la disposition du logo et du menu hamburger sur mobile */
 @media (max-width: 768px) {
     /* ✅ Assurer que l'espace entre le logo et le hamburger est bien distribué */
