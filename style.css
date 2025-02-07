@@ -488,16 +488,16 @@ header {
         justify-content: space-between; /* Espace entre le logo et le hamburger */
         align-items: center;
         width: 100%;
-        padding: 0 15px; /* Un peu d'espace autour */
+        padding: 0 20px; /* Un peu d'espace autour */
     }
 
-    /* ✅ Positionner le bouton hamburger à gauche */
+    /* ✅ Positionner le bouton hamburger à gauche avec un peu d'espace */
     .menu-toggle {
         position: absolute;
         left: 15px; /* Ajouter un espace de 15px du bord gauche */
     }
 
-    /* ✅ Centrer le logo */
+    /* ✅ Centrer le logo au milieu avec un peu de marge */
     .logo {
         flex-grow: 1;
         display: flex;
@@ -511,8 +511,10 @@ header {
         width: 45px; /* Ajuste la taille du logo si nécessaire */
     }
 
-    /* ✅ Ajouter de l'espace à gauche du logo */
-    .logo {
-        margin-left: 15px; /* Ajouter un espace de 15px à gauche */
+    /* ✅ Ajuster l'alignement du bouton "S'inscrire" */
+    .inscription-btn {
+        position: absolute;
+        right: 15px; /* Ajouter un espace de 15px à droite */
+        top: 15px; /* Éviter qu'il ne soit trop proche du haut */
     }
 }
