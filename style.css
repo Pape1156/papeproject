@@ -465,7 +465,6 @@ header {
     z-index: -1; /* Cela passe toutes les images derrière tout le contenu */
 }
 
-
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
     /* ✅ Conteneur du header pour aligner les éléments */
@@ -484,10 +483,10 @@ header {
         z-index: 10;
     }
 
-    /* ✅ Logo parfaitement centré */
+    /* ✅ Décaler légèrement le logo vers la gauche */
     .logo {
         position: absolute;
-        left: 50%;
+        left: 48%; /* Avant c'était 50%, maintenant légèrement vers la gauche */
         transform: translateX(-50%);
         display: flex;
         align-items: center;
