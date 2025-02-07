@@ -486,7 +486,7 @@ header {
     /* ✅ Décaler encore légèrement le logo vers la gauche */
     .logo {
         position: absolute;
-        left: 45%; /* Avant c'était 48%, maintenant encore plus précis */
+        left: 43%; /* Avant c'était 48%, maintenant encore plus précis */
         transform: translateX(-50%);
         display: flex;
         align-items: center;
