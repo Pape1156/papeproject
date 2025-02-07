@@ -10,11 +10,17 @@
 
     <!-- ✅ Header avec menu responsive -->
     <header>
-        <nav class="navbar">
-            <!-- ✅ Bouton menu hamburger -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="senegal.png" alt="Logo École Excellence">
+        </div>
 
-            <ul class="nav-links">
+        <!-- ✅ Bouton menu hamburger -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav class="navbar">
+            <ul>
                 <li><a href="sitesenegal.html">Accueil</a></li>
                 <li><a href="#">Notre Histoire</a></li>
                 <li><a href="Nos valeur.html">Nos Valeurs</a></li>
@@ -64,6 +70,47 @@
         </div>
     </section>
 
+    <!-- ✅ Section Équipe -->
+    <section class="team">
+        <h2>Notre Équipe</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="images.jpeg" alt="Directeur">
+                <h3>M. Ndiaye</h3>
+                <p>Directeur</p>
+            </div>
+            <div class="member">
+                <img src="images.jpeg" alt="Professeur de Mathématiques">
+                <h3>Mme Diallo</h3>
+                <p>Professeur de Mathématiques</p>
+            </div>
+            <div class="member">
+                <img src="images.jpeg" alt="Professeur de Français">
+                <h3>M. Sarr</h3>
+                <p>Professeur de Français</p>
+            </div>
+            <div class="member">
+                <img src="images.jpeg" alt="Professeur de Sciences">
+                <h3>Mme Ba</h3>
+                <p>Professeur de Sciences</p>
+            </div>
+        </div>
+        <a href="notre-equipe.html" class="btn">Voir toute l'équipe</a>
+    </section>
+
+    <!-- ✅ Section Témoignages -->
+    <section class="testimonials-section">
+        <h2>Témoignages de Parents d'Élèves</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <span class="quote">“</span>
+                <img src="tem.png" alt="Témoignage 1">
+                <p>Une infinie gratitude pour tout votre investissement. De magnifiques moments de partage.</p>
+                <p class="author">ANONYME <br> PARENT D'ÉLÈVE</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ✅ Section Contact -->
     <section class="contact-section">
         <h2>Nous vous invitons à en savoir plus sur notre processus d’admission</h2>
@@ -72,14 +119,15 @@
 
     <!-- ✅ FOOTER -->
     <footer class="footer">
+        <div class="line"></div>
         <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
     </footer>
 
     <!-- ✅ JavaScript pour le menu hamburger -->
     <script>
         function toggleMenu() {
-            const menu = document.querySelector(".nav-links");
-            menu.classList.toggle("active");
+            const navbar = document.querySelector(".navbar ul");
+            navbar.classList.toggle("active");
         }
     </script>
 
