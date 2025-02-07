@@ -508,4 +508,10 @@ header {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* ✅ Placer le hamburger à gauche */
+    .menu-toggle {
+        position: absolute;
+        left: 15px; /* Décalé vers la gauche */
+    }
 }
