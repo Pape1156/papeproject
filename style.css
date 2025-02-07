@@ -432,44 +432,41 @@ nav ul li a:hover {
 .contact-button:hover {
     background: #60001E;
     transform: scale(1.05);
+
 }
-/* ✅ SECTION FOOTER */
+
+/* ✅ FOOTER */
 .footer {
-    background: #80002A; /* Couleur bordeaux */
-    color: white;
+    background: #f8f8f8; /* Gris clair harmonisé */
+    color: #333; /* Texte foncé mais doux */
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
+    margin-top: 50px; /* Ajoute un peu d’espace avant le footer */
+    border-top: none; /* On enlève la bordure supplémentaire */
 }
 
-/* ✅ Ligne séparatrice */
+/* ✅ FOOTER */
+.footer {
+    background: #f8f8f8; /* Gris clair harmonisé */
+    color: #333; /* Texte foncé mais doux */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 50px; /* Espacement au-dessus */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Ajout d’un seul trait fin et discret */
+}
+
+/* ✅ Ligne séparatrice (Supprimée pour éviter le doublon) */
 .footer .line {
-    width: 90%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.5);
-    margin: 15px auto;
+    display: none;
 }
 
 /* ✅ Texte copyright */
 .footer p {
     font-size: 14px;
+    opacity: 0.7; /* Un léger effet de transparence pour adoucir */
 }
-
-
-
-
-/* ✅ Conteneur principal */
-.inscription-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap; /* Pour s'adapter sur mobile */
-}
-
 /* ✅ Style pour la carte */
 .map-container {
     flex: 1;
@@ -659,7 +656,7 @@ nav ul li a:hover {
 /* ✅ SECTION VALEURS */
 .valeurs-container {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px; /* Ajout de plus d'espace pour aérer */
     background: #f9f9f9;
 }
 
@@ -667,13 +664,13 @@ nav ul li a:hover {
     font-size: 36px;
     font-weight: bold;
     color: #0066cc;
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* Plus d'espace sous le titre */
 }
 
 .valeurs-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px; /* Augmente l'espacement entre les cartes */
     flex-wrap: wrap;
 }
 
@@ -681,36 +678,38 @@ nav ul li a:hover {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
+    width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* ✅ Effet au survol des cartes */
 .valeur-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .valeur-card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
+    width: 90px; /* Agrandir légèrement les icônes */
+    height: 90px;
+    margin-bottom: 20px;
 }
 
 .valeur-card h3 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .valeur-card p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
 }
 
 /* ✅ SECTION MISSION */
 .mission-container {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: white;
 }
 
@@ -718,9 +717,9 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px; /* Augmenter la largeur pour plus de lisibilité */
     margin: auto;
-    gap: 40px;
+    gap: 60px; /* Augmenter l'espacement */
 }
 
 .mission-text {
@@ -728,7 +727,7 @@ nav ul li a:hover {
 }
 
 .mission-text h2 {
-    font-size: 36px;
+    font-size: 38px; /* Augmenter la taille du titre */
     font-weight: bold;
     color: #0066cc;
     margin-bottom: 20px;
@@ -737,7 +736,7 @@ nav ul li a:hover {
 .mission-text p {
     font-size: 18px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8; /* Espacement des lignes amélioré */
 }
 
 .mission-image {
@@ -746,8 +745,16 @@ nav ul li a:hover {
 
 .mission-image img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Agrandir l’image */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Effet au survol de l’image de mission */
+.mission-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ✅ RESPONSIVE */
@@ -760,5 +767,9 @@ nav ul li a:hover {
     .mission-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    .mission-image img {
+        max-width: 100%; /* Adapter la taille sur mobile */
     }
 }
