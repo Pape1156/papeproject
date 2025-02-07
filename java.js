@@ -1,28 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".navbar");
     const toggleButton = document.querySelector(".menu-toggle");
+    const hero = document.querySelector(".hero");
+    const mainContent = document.querySelector("main");
 
-    let closeTimeout; // Variable pour le timer automatique
-    let interactionTimeout; // Timer pour déclencher le timer automatique après 1 seconde
+    // ✅ Crée un overlay noir
+    const overlay = document.createElement("div");
+    overlay.classList.add("menu-overlay");
+    document.body.appendChild(overlay);
 
-    // ✅ Fonction pour ouvrir et fermer le menu
+    // ✅ Fonction pour ouvrir le menu et flouter le contenu derrière
     const openMenu = () => {
         menu.classList.add("active");
-        document.body.classList.add("no-scroll");
+        document.body.classList.add("menu-open"); // ✅ Ajoute la classe qui active le flou
+        overlay.style.display = "block"; // ✅ Affiche l'overlay
 
-        // ✅ Démarrer un timer après 1 seconde pour déclencher le timer de fermeture
-        interactionTimeout = setTimeout(() => {
-            startAutoCloseTimer(); // On démarre le timer de fermeture après 1 seconde
-        }, 1000);
+        // ✅ Ajoute un flou sur le contenu en arrière-plan
+        if (hero) hero.style.filter = "blur(8px)";
+        if (mainContent) mainContent.style.filter = "blur(8px)";
     };
 
+    // ✅ Fonction pour fermer le menu et enlever le flou
     const closeMenu = () => {
         menu.classList.remove("active");
-        document.body.classList.remove("no-scroll");
+        document.body.classList.remove("menu-open"); // ✅ Supprime la classe qui active le flou
+        overlay.style.display = "none"; // ✅ Cache l'overlay
 
-        // ✅ Annuler tous les timers
-        clearTimeout(closeTimeout);
-        clearTimeout(interactionTimeout);
+        // ✅ Retire le flou du contenu
+        if (hero) hero.style.filter = "none";
+        if (mainContent) mainContent.style.filter = "none";
     };
 
     const toggleMenu = () => {
@@ -33,43 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // ✅ Démarrer le timer automatique après 1 seconde d'inactivité
-    const startAutoCloseTimer = () => {
-        clearTimeout(closeTimeout); // Supprime l'ancien timer
-        closeTimeout = setTimeout(() => {
-            closeMenu();
-        }, 5000); // Ferme après 5 secondes (on pourra le passer à 3s plus tard)
-    };
-
     // ✅ Ouvrir le menu en cliquant sur le bouton hamburger
     toggleButton.addEventListener("click", function (event) {
         event.stopPropagation();
         toggleMenu();
     });
 
-    // ✅ Fermer le menu en cliquant N'IMPORTE OÙ sur la page sauf sur le menu
+    // ✅ Fermer le menu en cliquant sur l'overlay noir
+    overlay.addEventListener("click", closeMenu);
+
+    // ✅ Fermer le menu en cliquant en dehors
     document.addEventListener("click", function (event) {
         if (menu.classList.contains("active") && 
             !menu.contains(event.target) && 
-            !toggleButton.contains(event.target)) {
+            !toggleButton.contains(event.target) &&
+            event.target !== overlay) {
             closeMenu();
         }
-    });
-
-    // ✅ Empêcher la fermeture si on clique DANS le menu et redémarrer le timer
-    menu.addEventListener("click", function (event) {
-        event.stopPropagation();
-
-        // ✅ Annuler le timer automatique et redémarrer après 1 seconde
-        clearTimeout(closeTimeout);
-        clearTimeout(interactionTimeout);
-        interactionTimeout = setTimeout(() => {
-            startAutoCloseTimer();
-        }, 1000);
-    });
-
-    // ✅ Fermer immédiatement le menu si un lien est cliqué
-    document.querySelectorAll(".navbar ul li a").forEach(link => {
-        link.addEventListener("click", closeMenu);
     });
 });
