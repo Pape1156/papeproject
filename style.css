@@ -465,6 +465,8 @@ header {
     z-index: -1; /* Cela passe toutes les images derrière tout le contenu */
 }
 
+
+
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
     /* ✅ Ajuster la taille de l'image */
@@ -477,8 +479,12 @@ header {
     .inscription-btn a {
         padding: 8px 15px; /* Réduit les padding du bouton */
         font-size: 14px; /* Réduit la taille du texte pour le bouton */
+        position: absolute; /* Positionner le bouton */
+        right: 15px; /* Aligner le bouton sur la droite */
+        top: 50%; /* Centrer verticalement */
+        transform: translateY(-50%); /* Ajuste le centrage vertical */
     }
-    
+
     /* ✅ Ajustement du logo sur mobile */
     .logo img {
         width: 40px; /* Ajuste la taille du logo */
