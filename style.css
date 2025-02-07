@@ -467,49 +467,37 @@ header {
 
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
-    /* ✅ Ajuste la taille de l'image hero */
-    .hero {
-        padding-top: 80px; /* Ajuste le padding pour mieux s'adapter aux petits écrans */
-        height: 50vh; /* Réduit la hauteur de l'image sur mobile pour une meilleure lisibilité */
-    }
-
-    .menu-open .hero {
-        height: 50vh; /* S'assure que l'image ne prend pas trop de place */
-    }
-
-    /* ✅ Ajustement de la disposition du logo et du menu hamburger sur mobile */
     .header-container {
         display: flex;
-        justify-content: space-between; /* Espace entre le logo et le hamburger */
+        justify-content: space-between; /* Crée un espace entre les éléments */
         align-items: center;
         width: 100%;
         padding: 0 15px; /* Un peu d'espace autour */
     }
 
-    /* ✅ Positionner le bouton hamburger à gauche avec un peu d'espace */
+    /* ✅ Positionner le bouton hamburger à gauche */
     .menu-toggle {
         position: absolute;
-        left: 15px; /* Ajouter un espace de 15px du bord gauche */
+        left: 15px; /* Espace de 15px à gauche */
     }
 
-    /* ✅ Centrer le logo au milieu */
+    /* ✅ Centrer le logo du Sénégal */
     .logo {
         flex-grow: 1;
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Centrer le logo */
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Centrer le logo */
+        left: 50%; /* Positionner à 50% de la largeur */
+        transform: translateX(-50%); /* Déplacer de moitié pour le centrer */
     }
 
     .logo img {
-        width: 45px; /* Ajuste la taille du logo si nécessaire */
+        width: 45px; /* Ajuste la taille du logo */
     }
 
-    /* ✅ Ajuster l'alignement du bouton "S'inscrire" */
+    /* ✅ Positionner le bouton "S'inscrire" à droite */
     .inscription-btn {
         position: absolute;
-        right: 15px; /* Ajouter un espace de 15px à droite */
-        top: 15px; /* Éviter qu'il ne soit trop proche du haut */
+        right: 15px; /* Espace de 15px à droite */
     }
 }
