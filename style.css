@@ -789,6 +789,10 @@ header {
     font-weight: bold;
 }
 
+
+
+
+
 /* ✅ Menu Hamburger */
 .menu-toggle {
     font-size: 28px;
@@ -798,7 +802,7 @@ header {
 
 /* ✅ Image de présentation */
 .hero {
-    background: url('image.jpg') center/cover no-repeat;
+    background: url('petit.jpg.webp') center/cover no-repeat;
     height: 50vh;
     text-align: center;
     display: flex;
