@@ -799,15 +799,14 @@ body {
     padding: 20px 0;
 }
 
-/* Ajoute ton code ici, à la fin */
 @media (max-width: 768px) {
-    /* ✅ Ajustement pour mobile */
     .hero {
-        height: 50vh;
-        padding: 50px 20px;
+        height: 50vh !important;
+        padding: 50px 20px !important;
     }
 
     .navbar ul {
-        display: none;
+        display: none !important;
     }
+}
 }
