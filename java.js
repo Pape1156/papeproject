@@ -7,18 +7,24 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.add("menu-overlay");
     document.body.appendChild(overlay);
 
+    // ✅ Correction : Assure que la page peut scroller dès le chargement
+    document.body.classList.remove("no-scroll");
+    document.documentElement.style.overflow = "auto";
+
     // Fonction pour ouvrir le menu et désactiver le défilement
     const openMenu = () => {
         menu.classList.add("active");
         document.body.classList.add("menu-open", "no-scroll"); // Ajoute "no-scroll" pour désactiver le défilement
         overlay.style.display = "block"; // Affiche le fond noir
+        document.documentElement.style.overflow = "hidden"; // 🔥 Empêche le scroll quand le menu est ouvert
     };
 
     // Fonction pour fermer le menu et réactiver le défilement
     const closeMenu = () => {
         menu.classList.remove("active");
-        document.body.classList.remove("menu-open", "no-scroll"); // Retire "no-scroll" pour réactiver le défilement
+        document.body.classList.remove("menu-open", "no-scroll"); // ✅ Assure que le body peut scroller
         overlay.style.display = "none"; // Cache le fond noir
+        document.documentElement.style.overflow = "auto"; // ✅ Forcer le scroll après fermeture du menu
     };
 
     const toggleMenu = () => {
