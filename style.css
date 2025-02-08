@@ -438,7 +438,7 @@ header {
 
 
 /* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
-.hero, .hero-valeurs {
+.hero, .hero-valeurs, .hero-temoignages  {
     padding-top: 120px;
     height: 60vh;
     display: flex;
@@ -1325,3 +1325,5 @@ header {
         transform: translateX(15px); /* Décale l'image de 20px vers la droite */
     }
 }
+
+
