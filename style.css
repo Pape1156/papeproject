@@ -653,11 +653,35 @@ header {
 
 
 
+
+
 /* ✅ Section Équipe */
 .team {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px; /* Augmente l'espace au-dessus et en dessous du titre */
     background: #f8f8f8;
+    position: relative;
+}
+
+.team h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 50px; /* Augmente l'espace sous le titre */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    position: relative;
+}
+
+/* ✅ Ajout du trait sous le titre */
+.team h2::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #80002A;
+    display: block;
+    margin: 15px auto 0; /* Augmente l'espace entre le titre et le trait */
+    border-radius: 2px;
 }
 
 .team-members {
@@ -709,4 +733,161 @@ header {
 
 .btn:hover {
     background: #004999;
+}
+
+/* ✅ Responsive : Adaptation de la section équipe */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column; /* Cartes en colonne */
+        align-items: center; /* Centrage des cartes */
+        gap: 20px; /* Moins d’espace entre les cartes */
+    }
+
+    .member {
+        width: 90%; /* Largeur plus grande pour s’adapter au mobile */
+        max-width: 400px; /* Empêcher les cartes de devenir trop larges */
+        padding: 20px;
+    }
+
+    .member h3 {
+        font-size: 18px;
+    }
+
+    .member p {
+        font-size: 14px;
+    }
+}
+
+
+/* ✅ SECTION TÉMOIGNAGES */
+.testimonials-section {
+    background: white;
+    padding: 60px 10px; /* Augmente l'espace autour du titre */
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+
+/* ✅ Titre de la section */
+.testimonials-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px; /* Ajoute plus d'espace sous le titre */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #80002A;
+    position: relative;
+}
+
+.testimonials-section h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #80002A;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ✅ Conteneur des témoignages */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Augmente l'espace entre les cartes */
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    margin: auto;
+    align-items: stretch;
+}
+
+/* ✅ Carte individuelle */
+.testimonial-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    min-height: 380px; /* Augmente légèrement la hauteur */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Ajout des guillemets UNIQUEMENT sur les cartes */
+.testimonial-card::before {
+    content: "\201C"; /* Guillemets ouvrants */
+    font-size: 40px;
+    color: #80002A;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    font-family: serif;
+}
+
+.testimonial-card::after {
+    content: "\201D"; /* Guillemets fermants */
+    font-size: 40px;
+    color: #80002A;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    font-family: serif;
+}
+
+/* ✅ Auteur */
+.testimonial-card .author {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #80002A;
+    margin-bottom: 8px;
+    order: -1;
+}
+
+/* ✅ Citation en image */
+.testimonial-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px; /* Ajoute de l'espace sous les images */
+    height: 190px; /* Légèrement plus grande */
+    object-fit: contain;
+}
+
+/* ✅ Texte du témoignage */
+.testimonial-card p {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    color: #444;
+    line-height: 1.4;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .testimonial-card {
+        width: 90%;
+        max-width: 380px;
+        padding: 20px;
+    }
 }
