@@ -628,14 +628,28 @@ header {
     color: #666;
 }
 
-/* ✅ Responsive : Permet aux cartes de passer en colonne sur mobile */
-@media (max-width: 1024px) {
+/* ✅ Responsive : Passage en colonne sur téléphone */
+@media (max-width: 768px) {
     .values-container {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Cartes en colonne */
+        align-items: center; /* Centrage des cartes */
+        gap: 20px; /* Moins d’espace entre les cartes */
+    }
+
+    .value-card {
+        width: 90%; /* Largeur plus grande pour s’adapter au mobile */
+        max-width: 400px; /* Empêcher les cartes de devenir trop larges */
+        padding: 20px;
+    }
+
+    .value-card h3 {
+        font-size: 18px;
+    }
+
+    .value-card p {
+        font-size: 14px;
     }
 }
-
 
 
 
