@@ -67,41 +67,49 @@
             </iframe>
         </div>
 
-       <!-- ✅ Formulaire d'Inscription -->
-<div class="form-container">
-    <h2>Formulaire d'Inscription</h2>
-    <form action="traitement.php" method="POST">
-        <div class="form-group">
-            <label for="nom">Nom complet :</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
+      <!-- ✅ Formulaire d'Inscription -->
+      <div class="form-container">
+        <h2>Formulaire d'Inscription</h2>
+        <form action="https://formsubmit.co/pape01570@gmail.com" method="POST">
+            <!-- ✅ Caché : empêche les spams -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- ✅ Caché : redirection après soumission -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:8000/admissions.html">
 
-        <div class="form-group">
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+            <div class="form-group">
+                <label for="nom">Nom complet :</label>
+                <input type="text" id="nom" name="name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="telephone">Numéro de téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" required>
-        </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <div class="form-group full-width">
-            <label for="message">Informations supplémentaires :</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="phone" required>
+            </div>
 
-        <button type="submit" class="submit-button">Envoyer la demande</button>
-    </form>
-</div>
+            <div class="form-group full-width">
+                <label for="motivation">Informations supplémentaires :</label>
+                <textarea id="motivation" name="message" rows="4" required></textarea>
+            </div>
 
-    <!-- ✅ FOOTER -->
-    <footer class="footer">
-        <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
-    </footer>
+            <button type="submit" class="submit-button">Envoyer la demande</button>
+        </form>
+    </div>
+</section>
 
-    <!-- ✅ Appel du fichier JavaScript -->
-    <script src="java.js"></script>
+ <!-- ✅ FOOTER -->
+ <footer class="footer">
+    <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
+</footer>
+
+<!-- ✅ Appel du fichier JavaScript -->
+<script src="java.js"></script>
+
 
 </body>
 </html>

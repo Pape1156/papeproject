@@ -1503,21 +1503,15 @@ header {
     background: #60001E;
 }
 
-/* ✅ Responsive - Changer l'ordre des éléments sur mobile */
+/* ✅ Responsive */
 @media (max-width: 768px) {
     .inscription-container {
         flex-direction: column;
         align-items: center;
     }
 
-    /* ✅ Change l'ordre : formulaire en premier, carte après */
+    .map-container,
     .form-container {
-        order: 1;
-        width: 90%;
-    }
-
-    .map-container {
-        order: 2;
         width: 90%;
     }
 }
