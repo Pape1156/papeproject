@@ -1269,6 +1269,9 @@ header {
 
 .mission-image {
     flex: 1;
+    display: flex;
+    justify-content: center; /* Centre l'image */
+    align-items: center;
 }
 
 .mission-image img {
@@ -1309,6 +1312,11 @@ header {
 
     .mission-text p {
         font-size: 16px;
+    }
+
+    .mission-image {
+        display: flex;
+        justify-content: center; /* Centre l'image sur mobile */
     }
 
     .mission-image img {
