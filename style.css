@@ -1315,14 +1315,13 @@ header {
 
     .mission-image {
         display: flex;
-        justify-content: flex-end; /* Essaye de pousser l'image vers la droite */
+        justify-content: center; /* Centrage de l’image */
         width: 100%;
     }
 
     .mission-image img {
-        max-width: 70%; /* Réduit légèrement la taille de l'image */
+        max-width: 80%;
         border-radius: 8px;
-        margin-left: auto; /* Pousse l'image vers la droite */
-        margin-right: 0; /* S'assure qu'elle n'est pas bloquée à gauche */
+        transform: translateX(20px); /* Décale l'image de 20px vers la droite */
     }
 }
