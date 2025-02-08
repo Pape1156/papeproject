@@ -433,6 +433,10 @@ header {
     height: 100vh; /* Empêche le défilement vertical */
 }
 
+
+
+
+
 /* ✅ SECTION HERO */
 .hero {
     padding-top: 120px;
@@ -472,6 +476,10 @@ header {
     z-index: 1000; /* ✅ S'assure qu'il s'affiche bien sans forcer */
     box-shadow: none; /* ❌ Supprime l'ombre s'il y en avait une */
 }
+
+
+
+
 
 
 /* ✅ Ajustement pour les petits écrans (mobiles) */
@@ -519,6 +527,9 @@ header {
     }
 }
 
+
+
+
 /* ✅ SECTION NOTRE HISTOIRE */
 .history-section {
     text-align: center;
@@ -547,3 +558,141 @@ header {
     color: #666;
 }
 
+
+
+
+/* ✅ SECTION VALEURS & MISSION */
+.values-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+}
+
+/* ✅ Titre */
+.values-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 30px;
+}
+
+/* ✅ Conteneur flexible */
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap; /* Empêche les cartes de passer en colonne */
+    max-width: 1200px; /* Fixe une largeur max pour éviter l'étalement */
+    margin: auto; /* Centre le conteneur */
+}
+
+/* ✅ Cartes des valeurs */
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px; /* Taille plus grande */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✅ Ajout d'effet hover (animation fluide) */
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Icônes et animation */
+.value-card img {
+    width: 100px; /* Icônes plus grandes */
+    height: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ✅ Titres */
+.value-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ✅ Texte descriptif */
+.value-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* ✅ Responsive : Permet aux cartes de passer en colonne sur mobile */
+@media (max-width: 1024px) {
+    .values-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* ✅ Section Équipe */
+.team {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 230px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.member p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ✅ Bouton Voir toute l'équipe */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #004999;
+}
