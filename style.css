@@ -891,3 +891,118 @@ header {
         padding: 20px;
     }
 }
+
+/* ✅ Section Contact */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.contact-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #80002A;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-message {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+/* ✅ Style du bouton */
+.contact-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #80002A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-button:hover {
+    background: #60001E;
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .contact-message {
+        font-size: 26px;
+        max-width: 90%;
+    }
+
+    .contact-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}
+
+
+/* ✅ FOOTER */
+.footer {
+    background: #f8f8f8; /* Gris clair harmonisé */
+    color: #333; /* Texte foncé mais doux */
+    text-align: center;
+    padding: 20px 0; /* Réduction de l'espace pour éviter trop de blanc */
+    font-size: 14px;
+    margin-top: 40px; /* Réduction de l'espace au-dessus */
+    border-top: 2px solid rgba(0, 0, 0, 0.1); /* Ajout d’un trait fin et discret */
+    position: relative;
+}
+
+/* ✅ Ajout d’un trait décoratif au-dessus du footer */
+.footer::before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #80002A;
+    display: block;
+    margin: 0 auto 10px; /* Centre et réduit l'espace en bas */
+    border-radius: 2px;
+}
+
+/* ✅ Texte copyright */
+.footer p {
+    font-size: 14px;
+    opacity: 0.7; /* Un léger effet de transparence pour adoucir */
+    margin: 0;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 10px;
+        font-size: 12px;
+        margin-top: 30px; /* Ajustement pour mobile */
+    }
+
+    .footer::before {
+        width: 80px; /* Réduit la taille du trait pour mobile */
+        height: 2px;
+    }
+}
