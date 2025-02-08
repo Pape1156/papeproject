@@ -1322,6 +1322,6 @@ header {
     .mission-image img {
         max-width: 80%;
         border-radius: 8px;
-        transform: translateX(20px); /* Décale l'image de 20px vers la droite */
+        transform: translateX(15px); /* Décale l'image de 20px vers la droite */
     }
 }
