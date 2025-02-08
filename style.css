@@ -1316,11 +1316,13 @@ header {
 
     .mission-image {
         display: flex;
-        justify-content: center; /* Centre l'image sur mobile */
+        justify-content: flex-end; /* Décale l'image vers la droite */
+        width: 100%;
     }
 
     .mission-image img {
-        max-width: 80%; /* Réduit la taille de l'image pour éviter qu'elle prenne trop d’espace */
+        max-width: 80%; /* Réduit la taille de l'image */
         border-radius: 8px;
+        margin-right: 20%; /* Décale encore un peu l'image vers la droite */
     }
 }
