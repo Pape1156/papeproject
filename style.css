@@ -437,8 +437,8 @@ header {
 
 
 
-/* ✅ SECTION HERO */
-.hero {
+/* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
+.hero, .hero-valeurs {
     padding-top: 120px;
     height: 60vh;
     display: flex;
@@ -450,6 +450,35 @@ header {
     background: url('petit.jpg.webp') center/cover no-repeat;
     transition: opacity 0.3s ease;
     z-index: 0; /* Image en arrière-plan */
+}
+
+/* ✅ Overlay réutilisable pour toutes les sections HERO */
+.hero::before, .hero-valeurs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content, .hero-valeurs .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1, .hero-valeurs h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p, .hero-valeurs p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
 }
 
 /* ✅ Quand le menu est ouvert, l’image et tout le contenu passent derrière */
@@ -477,13 +506,19 @@ header {
     box-shadow: none; /* ❌ Supprime l'ombre s'il y en avait une */
 }
 
-
-
-
-
-
 /* ✅ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
+    .hero, .hero-valeurs {
+        height: 50vh;
+        padding-top: 100px;
+    }
+    .hero h1, .hero-valeurs h1 {
+        font-size: 32px;
+    }
+    .hero p, .hero-valeurs p {
+        font-size: 16px;
+    }
+
     /* ✅ Conteneur du header pour aligner les éléments */
     .header-container {
         display: flex;
@@ -526,7 +561,6 @@ header {
         font-size: 14px;
     }
 }
-
 
 
 
@@ -1005,4 +1039,196 @@ header {
         width: 80px; /* Réduit la taille du trait pour mobile */
         height: 2px;
     }
+}
+
+
+
+
+/* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
+.hero, .hero-valeurs {
+    padding-top: 120px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background: url('petit.jpg.webp') center/cover no-repeat;
+    transition: opacity 0.3s ease;
+    z-index: 0; /* Image en arrière-plan */
+}
+
+/* ✅ Overlay réutilisable pour toutes les sections HERO */
+.hero::before, .hero-valeurs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content, .hero-valeurs .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1, .hero-valeurs h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p, .hero-valeurs p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ✅ Responsive (Mobile) */
+@media (max-width: 768px) {
+    .hero, .hero-valeurs {
+        height: 50vh;
+        padding-top: 100px;
+    }
+    .hero h1, .hero-valeurs h1 {
+        font-size: 32px;
+    }
+    .hero p, .hero-valeurs p {
+        font-size: 16px;
+    }
+}
+
+
+/* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
+.hero, .hero-valeurs {
+    padding-top: 120px;
+    height: 60vh;
+    min-height: 400px; /* Assure une hauteur minimale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background: url('petit.jpg.webp') center/cover no-repeat;
+    background-size: cover; /* Assure que l'image couvre bien toute la section */
+    background-position: center; /* Centre l'image correctement */
+    transition: opacity 0.3s ease;
+    z-index: 0; /* Image en arrière-plan */
+}
+
+/* ✅ Overlay réutilisable pour toutes les sections HERO */
+.hero::before, .hero-valeurs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content, .hero-valeurs .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 80%; /* Ajuste la largeur pour s’adapter mieux */
+    max-width: 900px; /* Évite un texte trop large */
+}
+
+.hero h1, .hero-valeurs h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p, .hero-valeurs p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ✅ Responsive (Mobile) */
+@media (max-width: 768px) {
+    .hero, .hero-valeurs {
+        height: 50vh;
+        min-height: 300px; /* Ajustement pour mobile */
+        padding-top: 80px;
+    }
+    .hero h1, .hero-valeurs h1 {
+        font-size: 32px;
+    }
+    .hero p, .hero-valeurs p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ SECTION VALEURS */
+.valeurs-container {
+    text-align: center;
+    padding: 100px 20px; /* Ajout de plus d'espace pour aérer */
+    background: #f9f9f9;
+}
+
+.valeurs-container h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 50px; /* Plus d'espace sous le titre */
+}
+
+.valeurs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Augmente l'espacement entre les cartes */
+    flex-wrap: wrap;
+}
+
+.valeur-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Effet au survol des cartes */
+.valeur-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.valeur-card img {
+    width: 90px; /* Agrandir légèrement les icônes */
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.valeur-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.valeur-card p {
+    font-size: 18px;
+    color: #666;
 }
