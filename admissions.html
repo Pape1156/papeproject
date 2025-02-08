@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions - École IGLOO</title>
+    <title>Bienvenue à l’École IGLOO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ✅ HEADER -->
+    <!-- ✅ Overlay pour fermer le menu au clic à l'extérieur -->
+    <div class="overlay"></div>
+
     <header>
-        <div class="logo">
-            <img src="senegal.png" alt="Logo École IGLOO">
+        <div class="header-container">
+            <!-- ✅ Menu hamburger (à gauche) -->
+            <div class="menu-toggle">☰</div>
+    
+            <!-- ✅ Logo Sénégal (au centre) -->
+            <div class="logo">
+                <img src="senegal.png" alt="Logo Sénégal">
+            </div>
+    
+            <!-- ✅ Bouton d'inscription (à droite) -->
+            <div class="inscription-btn">
+                <a href="admissions.html">S'INSCRIRE</a>
+            </div>
         </div>
-        <nav>
-            <ul>
+    </header>
+
+    <!-- ✅ Menu Navigation (caché par défaut) -->
+    <nav class="navbar">
+        <div class="menu-container">
+            <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#">Notre Histoire</a></li>
+                <li><a href="#histoire">Notre Histoire</a></li>
                 <li><a href="Nos valeur.html">Nos Valeurs</a></li>
-                <li><a href="#">Notre Équipe</a></li>
-                <li><a href="#">Témoignages</a></li>
+                <li><a href="#equipe">Notre Équipe</a></li>
+                <li><a href="temoignage.html">Témoignages</a></li>
                 <li><a href="admissions.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- ✅ SECTION HERO -->
     <section class="hero">
@@ -85,10 +102,14 @@
         </div>
     </section>
 
-   <!-- ✅ FOOTER -->
-<footer class="footer">
-    <div class="line"></div>
-    <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
-</footer>
+
+    <!-- ✅ FOOTER -->
+    <footer class="footer">
+        <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
+    </footer>
+
+    <!-- ✅ Appel du fichier JavaScript -->
+    <script src="java.js"></script>
+
 </body>
 </html>

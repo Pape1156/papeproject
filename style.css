@@ -1327,3 +1327,191 @@ header {
 }
 
 
+/* ✅ SECTION ENGAGEMENT PARENTS */
+.engagement-parents {
+    padding: 80px 20px;
+    background: #f8f8f8; /* Fond gris clair pour bien différencier cette section */
+}
+
+.engagement-parents .mission-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 60px;
+}
+
+.engagement-parents .mission-text1 {
+    flex: 1;
+    text-align: left;
+}
+
+.engagement-parents .mission-text1 h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #0066cc; /* Même couleur que "Notre Mission" */
+    margin-bottom: 20px;
+}
+
+.engagement-parents .mission-text1 p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.engagement-parents .mission-image1 {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centre l'image */
+    align-items: center;
+}
+
+.engagement-parents .mission-image1 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Effet au survol de l’image */
+.engagement-parents .mission-image1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Responsive (Mobile) */
+@media (max-width: 768px) {
+    .engagement-parents {
+        padding: 50px 15px;
+    }
+
+    .engagement-parents .mission-content1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .engagement-parents .mission-text1 {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .engagement-parents .mission-text1 h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .engagement-parents .mission-text1 p {
+        font-size: 16px;
+    }
+
+    .engagement-parents .mission-image1 {
+        display: flex;
+        justify-content: center; /* Centrage de l’image */
+        width: 100%;
+    }
+
+    .engagement-parents .mission-image1 img {
+        max-width: 80%;
+        border-radius: 8px;
+        transform: translateX(15px); /* Décale l'image de 15px vers la droite */
+    }
+}
+
+
+
+/* ✅ SECTION FORMULAIRE + CARTE */
+.inscription-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Ajoute de l’espace entre la carte et le formulaire */
+    padding: 50px 20px;
+    background: #f9f9f9; /* Ajout d’un fond clair */
+    border-radius: 10px;
+}
+
+/* ✅ Google Map */
+.map-container {
+    width: 45%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Formulaire */
+.form-container {
+    width: 45%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #80002A;
+}
+
+/* ✅ Champs du formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80002A;
+    outline: none;
+}
+
+/* ✅ Bouton */
+.submit-button {
+    width: 100%;
+    background: #80002A;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #60001E;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .inscription-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container,
+    .form-container {
+        width: 90%;
+    }
+}
