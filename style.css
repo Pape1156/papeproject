@@ -1682,70 +1682,47 @@ header {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* ✅ Responsive pour le carrousel */
+/* ✅ Responsive Design pour smartphones (max-width: 768px) */
 @media (max-width: 768px) {
+    /* Réduction des marges et ajustement du padding */
     .mission-container3 {
         padding: 50px 15px;
     }
 
+    /* Mettre les éléments en colonne et centrer le texte */
     .mission-content3 {
         flex-direction: column;
         align-items: center;
+        text-align: center;
         gap: 30px;
     }
 
     .mission-text3 {
-        text-align: center;
-        max-width: 90%;
-    }
-
-    /* ✅ Correction du carrousel sur mobile */
-    .mission-image3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
+        text-align: center;
     }
 
+    /* Ajustement de la taille du titre */
+    .mission-text3 h2 {
+        font-size: 28px;
+    }
+
+    /* Ajustement de la taille du texte */
+    .mission-text3 p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Adaptation du carrousel */
     .carousel {
         width: 100%;
-        max-width: 350px; /* Taille plus adaptée pour le mobile */
-        height: 230px;
-        overflow: hidden;
+        max-width: 350px;
+        height: 240px;
     }
 
-    .carousel-images img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        transition: left 0.5s ease-in-out;
-    }
-
-    .carousel-images img.active {
-        left: 0;
-    }
-
-    /* ✅ Ajustement des boutons de navigation */
+    /* Ajustement des boutons du carrousel */
     .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        cursor: pointer;
         font-size: 20px;
-        border-radius: 5px;
-    }
-
-    .prev { left: 5px; }
-    .next { right: 5px; }
-
-    .prev:hover, .next:hover {
-        background: rgba(0, 0, 0, 0.7);
+        padding: 8px 12px;
     }
 }
