@@ -1689,46 +1689,39 @@ header {
         align-items: center;
         gap: 30px;
         width: 100%;
-        display: flex;
-    }
-
-    .mission-text3 {
         text-align: center;
-        max-width: 90%;
     }
 
-    /* ✅ Assure que le carrousel prend bien de la place */
-    .mission-image3 {
-        width: 100%;
-        max-width: 400px; /* Ajuste la taille max */
-        display: flex;
-        justify-content: center;
-    }
-
+    /* ✅ Ajuste la largeur du carrousel */
     .carousel {
         width: 100%;
-        max-width: 400px;
-        height: auto;
-        position: relative;
-        display: block; /* Assure que c'est bien visible */
-    }
-
-    .carousel-images {
-        display: flex;
-        width: 100%;
+        max-width: 350px; /* Taille plus adaptée sur mobile */
+        height: 250px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
+    /* ✅ Empêche les images de disparaître sur mobile */
     .carousel-images img {
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
         height: 250px;
-        object-fit: cover; /* Ajuste les images sans les déformer */
-        border-radius: 10px;
+        object-fit: cover; /* Assure une taille uniforme */
+        display: none; /* Cache toutes les images par défaut */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* ✅ Affiche uniquement l'image active */
+    .carousel-images img.active {
         display: block;
     }
 
-    /* ✅ Navigation */
+    /* ✅ Ajustement des boutons de navigation */
     .prev, .next {
         position: absolute;
         top: 50%;
@@ -1736,17 +1729,13 @@ header {
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
         border: none;
-        padding: 10px;
+        padding: 8px;
         cursor: pointer;
         z-index: 10;
         border-radius: 5px;
+        font-size: 20px;
     }
 
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
+    .prev { left: 5px; }
+    .next { right: 5px; }
 }
