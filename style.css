@@ -1682,7 +1682,7 @@ header {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* ✅ Responsive */
+//* ✅ Responsive */
 @media (max-width: 768px) {
     .mission-content3 {
         flex-direction: column;
@@ -1696,8 +1696,15 @@ header {
     }
 
     .carousel {
+        width: 90%;  /* Augmente la largeur sur mobile */
+        max-width: 400px; /* Un peu plus large */
+        height: auto; /* Laisse la hauteur s’adapter */
+    }
+
+    .carousel-images img {
         width: 100%;
-        max-width: 350px; /* Taille plus adaptée sur mobile */
-        height: 250px;
+        height: 250px; /* Fixe une hauteur */
+        object-fit: cover; /* Ajuste l'image sans la déformer */
+        border-radius: 10px; /* Ajoute un effet propre */
     }
 }
