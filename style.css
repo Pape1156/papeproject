@@ -1683,14 +1683,13 @@ header {
 }
 
 
-/* ✅ Responsive Design pour smartphones (max-width: 768px) */
+/* ✅ Fix complet pour le carrousel sur mobile */
 @media (max-width: 768px) {
-    /* Section principale */
     .mission-container3 {
-        padding: 40px 10px; /* Moins d’espace pour mieux s’adapter */
+        padding: 40px 10px;
     }
 
-    /* Mise en colonne pour mobile */
+    /* Empilement vertical */
     .mission-content3 {
         flex-direction: column;
         align-items: center;
@@ -1699,11 +1698,9 @@ header {
     }
 
     .mission-text3 {
-        width: 90%; /* Laisse un peu d’espace */
-        text-align: center;
+        width: 90%;
     }
 
-    /* Réduction du titre et des paragraphes */
     .mission-text3 h2 {
         font-size: 24px;
     }
@@ -1713,7 +1710,7 @@ header {
         line-height: 1.5;
     }
 
-    /* 📌 CORRECTION DU CARROUSEL */
+    /* 📌 Fix du carrousel */
     .mission-image3 {
         width: 100%;
         display: flex;
@@ -1721,24 +1718,37 @@ header {
     }
 
     .carousel {
-        width: 90%; /* Il s’adapte bien */
-        max-width: 380px; /* Limite pour éviter d’être trop grand */
+        width: 100%;
+        max-width: 350px;
         height: auto;
-        aspect-ratio: 4 / 3; /* Ratio parfait pour mobile */
+        aspect-ratio: 4 / 3;
+        position: relative;
+        overflow: hidden; /* Cache les débordements */
+    }
+
+    .carousel-images {
+        width: 100%;
+        height: 100%;
+        display: flex;
         position: relative;
     }
 
     .carousel-images img {
-        position: absolute;
         width: 100%;
         height: 100%;
-        max-height: 300px; /* Pour éviter les débordements */
         object-fit: cover;
+        position: absolute;
         left: 0;
         top: 0;
+        opacity: 0; /* Cache toutes les images */
+        transition: opacity 0.5s ease-in-out;
     }
 
-    /* ✅ Ajustement des boutons */
+    .carousel-images img.active {
+        opacity: 1; /* Affiche uniquement l’image active */
+    }
+
+    /* ✅ Boutons améliorés */
     .prev, .next {
         font-size: 18px;
         padding: 6px 10px;
