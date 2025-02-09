@@ -54,3 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-images img');
+
+function changeImage(step) {
+    images[currentIndex].classList.remove('active'); // Cache l'image actuelle
+    currentIndex = (currentIndex + step + images.length) % images.length; // Calcul du nouvel index
+    images[currentIndex].classList.add('active'); // Affiche la nouvelle image
+}
+
+// Initialisation : Affiche la première image
+document.addEventListener("DOMContentLoaded", () => {
+    images[0].classList.add('active');
+});

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue à l’École IGLOO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ✅ Overlay pour fermer le menu au clic à l'extérieur -->
+    <div class="overlay"></div>
+
+    <header>
+        <div class="header-container">
+            <!-- ✅ Menu hamburger (à gauche) -->
+            <div class="menu-toggle">☰</div>
+    
+            <!-- ✅ Logo Sénégal (au centre) -->
+            <div class="logo">
+                <img src="senegal.png" alt="Logo Sénégal">
+            </div>
+    
+            <!-- ✅ Bouton d'inscription (à droite) -->
+            <div class="inscription-btn">
+                <a href="admissions.html">S'INSCRIRE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ✅ Menu Navigation (caché par défaut) -->
+    <nav class="navbar">
+        <div class="menu-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Notre Histoire.html">Notre Histoire</a></li>
+                <li><a href="Nos valeur.html">Nos Valeurs</a></li>
+                <li><a href="#equipe">Notre Équipe</a></li>
+                <li><a href="temoignage.html">Témoignages</a></li>
+                <li><a href="admissions.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- ✅ HERO SECTION (Réutilisable pour toutes les pages) -->
+<section class="hero2">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Notre Histoire</h1>
+        <p>Depuis sa création, l'École IGLOO offre une éducation d'excellence, 
+            guidée par l'innovation et le respect. Découvrez notre parcours.</p>
+    </div>
+</section>
+
+ <!-- ✅ Section Histoire -->
+<section id="histoire" class="history-section">
+    <div class="history-container">
+        <h2>Notre Histoire</h2>
+        <p>Fondée en 2024, notre école s'est développée pour devenir une référence en éducation au Sénégal. 
+           Nous nous engageons à offrir un environnement d’apprentissage stimulant, 
+           où chaque élève peut grandir, apprendre et s’épanouir.</p>
+    </div>
+</section>
+
+
+
+<!-- ✅ SECTION STRUCTURE (Avec un carrousel d'images) -->
+<section class="mission-container3">
+    <div class="mission-content3">
+        <div class="mission-text3">
+            <h2>Nos Structures</h2>
+            <p>Découvrez notre école à travers nos infrastructures modernes et adaptées à l'éducation de qualité.</p>
+            <p>Nous offrons un environnement sécurisé, propice à l’apprentissage et à l’épanouissement de chaque élève.</p>
+        </div>
+        
+        <!-- ✅ Carrousel d'images -->
+        <div class="mission-image3">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="1.jpeg" alt="Notre école" class="active">
+                    <img src="2.jpeg" alt="Salle de classe">
+                    <img src="3.jpeg" alt="Bibliothèque">
+                    <img src="1.jpeg" alt="Cour de récréation">
+                </div>
+                <!-- ✅ Boutons de navigation -->
+                <button class="prev" onclick="changeImage(-1)">❮</button>
+                <button class="next" onclick="changeImage(1)">❯</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <!-- ✅ FOOTER -->
+    <footer class="footer">
+        <p>Copyright © 2025 | Groupe Scolaire IGLOO - Tous droits réservés</p>
+    </footer>
+
+    <!-- ✅ Appel du fichier JavaScript -->
+    <script src="java.js"></script>
+
+</body>
+</html>
