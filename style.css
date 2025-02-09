@@ -437,8 +437,13 @@ header {
 
 
 
-/* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
-.hero, .hero-valeurs, .hero-temoignages,.hero2  {
+/* ✅ SECTION HERO (Tout suit `.hero`) */
+.hero, 
+.hero-valeurs, 
+.hero-temoignages, 
+.hero2, 
+.hero3, 
+.hero-histoire {
     padding-top: 120px;
     height: 60vh;
     display: flex;
@@ -452,8 +457,13 @@ header {
     z-index: 0; /* Image en arrière-plan */
 }
 
-/* ✅ Overlay réutilisable pour toutes les sections HERO */
-.hero::before, .hero-valeurs::before {
+/* ✅ Overlay réutilisable */
+.hero::before, 
+.hero-valeurs::before,
+.hero-temoignages::before,
+.hero2::before,
+.hero3::before,
+.hero-histoire::before {
     content: "";
     position: absolute;
     top: 0;
@@ -464,62 +474,92 @@ header {
     z-index: 1;
 }
 
-.hero-content, .hero-valeurs .hero-content {
+/* ✅ Contenu harmonisé */
+.hero-content, 
+.hero-valeurs .hero-content,
+.hero-temoignages .hero-content,
+.hero2 .hero-content,
+.hero3 .hero-content,
+.hero-histoire .hero-content {
     position: relative;
     z-index: 2;
 }
 
-.hero h1, .hero-valeurs h1 {
+/* ✅ Titres et textes identiques */
+.hero h1, 
+.hero-valeurs h1,
+.hero-temoignages h1,
+.hero2 h1,
+.hero3 h1,
+.hero-histoire h1 {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.hero p, .hero-valeurs p {
+.hero p, 
+.hero-valeurs p,
+.hero-temoignages p,
+.hero2 p,
+.hero3 p,
+.hero-histoire p {
     font-size: 20px;
     max-width: 700px;
     margin: auto;
 }
 
-/* ✅ Quand le menu est ouvert, l’image et tout le contenu passent derrière */
-.menu-open .hero {
-    z-index: -1; /* L'image passe derrière tout le contenu */
-}
-
-/* ✅ S'assurer que l'overlay et les autres éléments passent aussi derrière */
+/* ✅ Ajustement du menu ouvert */
 .menu-open .navbar,
 .menu-open .menu-overlay,
 .menu-open main {
-    z-index: 1; /* Assurez-vous que le menu et l'overlay sont au-dessus du contenu */
+    z-index: 1;
 }
 
-/* ✅ Pour les autres éléments de la page (comme les images) */
+/* ✅ Empêcher les images de passer devant le menu */
 .menu-open img {
-    z-index: -1; /* Cela passe toutes les images derrière tout le contenu */
+    z-index: -1;
 }
 
+/* ✅ Ajustement du header */
 .header-container {
-    position: relative; /* ✅ Assure qu'il bouge avec le reste de la page */
+    position: relative;
     width: 100%;
-    background-color: white; /* ✅ Garde un fond blanc si besoin */
-    z-index: 1000; /* ✅ S'assure qu'il s'affiche bien sans forcer */
-    box-shadow: none; /* ❌ Supprime l'ombre s'il y en avait une */
+    background-color: white;
+    z-index: 1000;
+    box-shadow: none;
 }
 
-/* ✅ Ajustement pour les petits écrans (mobiles) */
+/* ✅ Responsive mobile */
 @media (max-width: 768px) {
-    .hero, .hero-valeurs {
+    .hero, 
+    .hero-valeurs, 
+    .hero-temoignages, 
+    .hero2, 
+    .hero3, 
+    .hero-histoire {
         height: 50vh;
         padding-top: 100px;
     }
-    .hero h1, .hero-valeurs h1 {
+
+    .hero h1, 
+    .hero-valeurs h1,
+    .hero-temoignages h1,
+    .hero2 h1,
+    .hero3 h1,
+    .hero-histoire h1 {
         font-size: 32px;
     }
-    .hero p, .hero-valeurs p {
+
+    .hero p, 
+    .hero-valeurs p,
+    .hero-temoignages p,
+    .hero2 p,
+    .hero3 p,
+    .hero-histoire p {
         font-size: 16px;
     }
 
-    /* ✅ Conteneur du header pour aligner les éléments */
+    /* ✅ Header mobile */
     .header-container {
         display: flex;
         align-items: center;
@@ -529,31 +569,31 @@ header {
         position: relative;
     }
 
-    /* ✅ Menu hamburger bien aligné à gauche */
+    /* ✅ Menu hamburger */
     .menu-hamburger {
         position: relative;
         z-index: 10;
     }
 
-    /* ✅ Décaler encore légèrement le logo vers la gauche */
+    /* ✅ Alignement du logo */
     .logo {
         position: absolute;
-        left: 43%; /* Avant c'était 48%, maintenant encore plus précis */
+        left: 43%;
         transform: translateX(-50%);
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px; /* Ajuste la largeur pour éviter un décalage */
+        width: 50px;
     }
 
     .logo img {
-        width: 40px; /* Ajuster la taille du logo */
+        width: 40px;
         display: block;
     }
 
-    /* ✅ Bouton "S'inscrire" bien aligné à droite */
+    /* ✅ Bouton "S'inscrire" bien aligné */
     .inscription-btn {
-        margin-left: auto; /* Pousse le bouton à droite */
+        margin-left: auto;
     }
 
     .inscription-btn a {
@@ -561,8 +601,6 @@ header {
         font-size: 14px;
     }
 }
-
-
 
 /* ✅ SECTION NOTRE HISTOIRE */
 .history-section {
@@ -999,50 +1037,69 @@ header {
 
 /* ✅ FOOTER */
 .footer {
-    background: #f8f8f8; /* Gris clair harmonisé */
-    color: #333; /* Texte foncé mais doux */
+    background: #f8f8f8;
+    color: #333;
     text-align: center;
-    padding: 20px 0; /* Réduction de l'espace pour éviter trop de blanc */
+    padding: 20px 0;
     font-size: 14px;
-    margin-top: 40px; /* Réduction de l'espace au-dessus */
-    border-top: 2px solid rgba(0, 0, 0, 0.1); /* Ajout d’un trait fin et discret */
+    margin-top: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    justify-content: space-between; /* Aligne proprement */
+    align-items: center;
+    padding: 20px 50px;
 }
 
-/* ✅ Ajout d’un trait décoratif au-dessus du footer */
+/* ✅ Correction du trait décoratif */
 .footer::before {
     content: "";
-    width: 100px;
+    width: 80px;
     height: 2px;
     background: #80002A;
     display: block;
-    margin: 0 auto 10px; /* Centre et réduit l'espace en bas */
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%); /* Centre parfaitement */
     border-radius: 2px;
 }
 
 /* ✅ Texte copyright */
 .footer p {
     font-size: 14px;
-    opacity: 0.7; /* Un léger effet de transparence pour adoucir */
+    opacity: 0.7;
     margin: 0;
+}
+
+/* ✅ Numéro de téléphone bien aligné */
+.footer-phone {
+    font-weight: bold;
+    color: #80002A;
+    text-align: right;
+    padding-right: 30px; /* Ajoute un peu d’espace à droite */
 }
 
 /* ✅ Responsive */
 @media (max-width: 768px) {
     .footer {
+        flex-direction: column;
+        text-align: center;
         padding: 15px 10px;
         font-size: 12px;
-        margin-top: 30px; /* Ajustement pour mobile */
+        margin-top: 30px;
     }
 
     .footer::before {
-        width: 80px; /* Réduit la taille du trait pour mobile */
+        width: 60px;
         height: 2px;
     }
+
+    .footer-phone {
+        margin-top: 10px;
+        padding-right: 0; /* Pas de padding à droite sur mobile */
+    }
 }
-
-
-
 
 /* ✅ SECTION HERO (Réutilisable pour toutes les pages) */
 .hero, .hero-valeurs {
