@@ -1682,37 +1682,38 @@ header {
     background: rgba(0, 0, 0, 0.7);
 }
 
+
 /* ✅ Responsive Design pour smartphones (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Ajustement de la section */
+    /* Section principale */
     .mission-container3 {
-        padding: 50px 15px;
+        padding: 40px 10px; /* Moins d’espace pour mieux s’adapter */
     }
 
-    /* Mise en colonne pour éviter que le texte et l’image soient côte à côte */
+    /* Mise en colonne pour mobile */
     .mission-content3 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 25px;
     }
 
     .mission-text3 {
-        width: 100%;
+        width: 90%; /* Laisse un peu d’espace */
         text-align: center;
     }
 
-    /* Ajustement des tailles de texte */
+    /* Réduction du titre et des paragraphes */
     .mission-text3 h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .mission-text3 p {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 15px;
+        line-height: 1.5;
     }
 
-    /* Adaptation du carrousel */
+    /* 📌 CORRECTION DU CARROUSEL */
     .mission-image3 {
         width: 100%;
         display: flex;
@@ -1720,25 +1721,30 @@ header {
     }
 
     .carousel {
-        width: 100%;
-        max-width: 100%;
+        width: 90%; /* Il s’adapte bien */
+        max-width: 380px; /* Limite pour éviter d’être trop grand */
         height: auto;
-        aspect-ratio: 4 / 3; /* Garde un bon ratio pour l'image */
+        aspect-ratio: 4 / 3; /* Ratio parfait pour mobile */
+        position: relative;
     }
 
     .carousel-images img {
-        position: relative; /* Corrige le bug des images */
-        left: 0;
+        position: absolute;
         width: 100%;
-        height: auto;
-        max-height: 350px;
+        height: 100%;
+        max-height: 300px; /* Pour éviter les débordements */
         object-fit: cover;
+        left: 0;
+        top: 0;
     }
 
-    /* Ajustement des boutons du carrousel */
+    /* ✅ Ajustement des boutons */
     .prev, .next {
         font-size: 18px;
-        padding: 8px 12px;
-        top: 50%;
+        padding: 6px 10px;
+        background: rgba(0, 0, 0, 0.4);
     }
+
+    .prev { left: 5px; }
+    .next { right: 5px; }
 }
