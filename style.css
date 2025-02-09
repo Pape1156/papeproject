@@ -1684,17 +1684,17 @@ header {
 
 /* ✅ Responsive Design pour smartphones (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Réduction des marges et ajustement du padding */
+    /* Ajustement de la section */
     .mission-container3 {
         padding: 50px 15px;
     }
 
-    /* Mettre les éléments en colonne et centrer le texte */
+    /* Mise en colonne pour éviter que le texte et l’image soient côte à côte */
     .mission-content3 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .mission-text3 {
@@ -1702,27 +1702,43 @@ header {
         text-align: center;
     }
 
-    /* Ajustement de la taille du titre */
+    /* Ajustement des tailles de texte */
     .mission-text3 h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
-    /* Ajustement de la taille du texte */
     .mission-text3 p {
         font-size: 16px;
         line-height: 1.6;
     }
 
     /* Adaptation du carrousel */
+    .mission-image3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .carousel {
         width: 100%;
-        max-width: 350px;
-        height: 240px;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3; /* Garde un bon ratio pour l'image */
+    }
+
+    .carousel-images img {
+        position: relative; /* Corrige le bug des images */
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
     }
 
     /* Ajustement des boutons du carrousel */
     .prev, .next {
-        font-size: 20px;
+        font-size: 18px;
         padding: 8px 12px;
+        top: 50%;
     }
 }
