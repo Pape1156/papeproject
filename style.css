@@ -1684,41 +1684,48 @@ header {
 
 /* ✅ Responsive pour le carrousel */
 @media (max-width: 768px) {
+    .mission-container3 {
+        padding: 50px 15px;
+    }
+
     .mission-content3 {
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        width: 100%;
-        text-align: center;
     }
 
-    /* ✅ Ajuste la largeur du carrousel */
-    .carousel {
-        width: 100%;
-        max-width: 350px; /* Taille plus adaptée sur mobile */
-        height: 250px;
-        overflow: hidden;
+    .mission-text3 {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    /* ✅ Correction du carrousel sur mobile */
+    .mission-image3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        width: 100%;
     }
 
-    /* ✅ Empêche les images de disparaître sur mobile */
+    .carousel {
+        width: 100%;
+        max-width: 350px; /* Taille plus adaptée pour le mobile */
+        height: 230px;
+        overflow: hidden;
+    }
+
     .carousel-images img {
         width: 100%;
-        max-width: 350px;
-        height: 250px;
-        object-fit: cover; /* Assure une taille uniforme */
-        display: none; /* Cache toutes les images par défaut */
+        height: 100%;
+        object-fit: cover;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 100%;
+        transition: left 0.5s ease-in-out;
     }
 
-    /* ✅ Affiche uniquement l'image active */
     .carousel-images img.active {
-        display: block;
+        left: 0;
     }
 
     /* ✅ Ajustement des boutons de navigation */
@@ -1726,16 +1733,19 @@ header {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         border: none;
-        padding: 8px;
+        padding: 8px 12px;
         cursor: pointer;
-        z-index: 10;
-        border-radius: 5px;
         font-size: 20px;
+        border-radius: 5px;
     }
 
     .prev { left: 5px; }
     .next { right: 5px; }
+
+    .prev:hover, .next:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
