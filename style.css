@@ -1477,26 +1477,15 @@ header {
     }
 }
 
-
-
-/* ✅ SECTION FORMULAIRE + CARTE */
+/* ✅ SECTION FORMULAIRE + INFOS */
 .inscription-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 40px; /* Ajoute de l’espace entre la carte et le formulaire */
     padding: 50px 20px;
-    background: #f9f9f9; /* Ajout d’un fond clair */
+    background: #ffffff; /* Fond blanc pour uniformiser */
     border-radius: 10px;
-}
-
-/* ✅ Google Map */
-.map-container {
-    width: 45%;
-    height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ✅ Formulaire */
@@ -1560,6 +1549,53 @@ header {
     background: #60001E;
 }
 
+/* ✅ SECTION INFOS À DROITE */
+.info-container {
+    width: 45%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container h2 {
+    font-size: 24px;
+    color: #80002A;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h3 {
+    font-size: 18px;
+    color: #80002A;
+    margin-bottom: 5px;
+}
+
+.info-section p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ✅ Lien email */
+.info-section a {
+    color: #80002A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
 /* ✅ Responsive */
 @media (max-width: 768px) {
     .inscription-container {
@@ -1567,10 +1603,11 @@ header {
         align-items: center;
     }
 
-    .map-container,
-    .form-container {
+    .form-container,
+    .info-container {
         width: 90%;
     }
+}
 }
 
 
