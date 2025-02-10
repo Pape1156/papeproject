@@ -1815,3 +1815,88 @@ header {
     .prev { left: 5px; }
     .next { right: 5px; }
 }
+
+
+
+
+
+/* ✅ Conteneur principal pour la section contact */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 40px;
+    background-color: white !important; /* 🔥 Fond blanc appliqué */
+}
+
+/* ✅ Google Map à gauche */
+.map-container {
+    width: 50%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white !important; /* 🔥 Fond blanc appliqué */
+}
+
+/* ✅ Bloc Contact à droite */
+.contact-info {
+    width: 45%;
+    background: white !important; /* 🔥 Fond blanc appliqué */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Titres et paragraphes */
+.contact-info h2 {
+    font-size: 24px;
+    color: #80002A;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ✅ Liens (Téléphone & Email) */
+.contact-info a {
+    color: #80002A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ S'assurer que toutes les sections ont un fond blanc */
+.section, 
+.footer, 
+.any-other-section {
+    background-color: white !important; /* 🔥 Fond blanc pour toutes les sections */
+}
+
+/* ✅ Ajustement du footer pour qu'il s’intègre bien */
+.footer {
+    border-top: 2px solid rgba(0, 0, 0, 0.05); /* Trait ultra léger */
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-container,
+    .contact-info {
+        width: 100%;
+    }
+}
